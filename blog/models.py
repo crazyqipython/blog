@@ -2,8 +2,9 @@ from __future__ import unicode_literals
 
 from django.db import models
 
+#????
 class EntryQuerySet(models.QuerySet):
-    def publish(self):
+    def published(self):
         return self.filter(publish = True)
 
 class Entry(models.Model):
