@@ -23,7 +23,7 @@ class Entry(models.Model):
     body = models.TextField()
     slug = models.SlugField(max_length=200, unique=True)
     publish = models.BooleanField(default=True)
-    created = models.DateTimeField(auto_now_add=True)
+    created = models.DateTimeField('创建时间',auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
     tags = models.ManyToManyField(Tag,verbose_name='标签',)
 
